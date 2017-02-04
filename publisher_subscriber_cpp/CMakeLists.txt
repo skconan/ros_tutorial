@@ -191,7 +191,12 @@ include_directories(include
 add_executable(publisher 
   src/publisher_cpp.cpp
 )
-
+add_executable(subscriber 
+  src/subscriber_cpp.cpp
+)
 target_link_libraries(publisher 
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(subscriber
   ${catkin_LIBRARIES}
 )
