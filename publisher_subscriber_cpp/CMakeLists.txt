@@ -185,18 +185,10 @@ catkin_package(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-include_directories(include 
-  ${catkin_INCLUDE_DIRS}
-)
-add_executable(publisher 
-  src/publisher_cpp.cpp
-)
-add_executable(subscriber 
-  src/subscriber_cpp.cpp
-)
-target_link_libraries(publisher 
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(subscriber
-  ${catkin_LIBRARIES}
-)
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(publisher src/publisher_cpp.cpp)
+target_link_libraries(publisher ${catkin_LIBRARIES})
+
+add_executable(subscriber src/subscriber_cpp.cpp)
+target_link_libraries(subscriber ${catkin_LIBRARIES})
