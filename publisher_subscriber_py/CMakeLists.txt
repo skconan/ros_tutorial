@@ -185,7 +185,3 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-include_directories(include ${catkin_INCLUDE_DIRS})
-add_executable(publisher_py src/publisher_py.py)
-target_link_libraries(publisher_py ${catkin_LIBRARIES})
