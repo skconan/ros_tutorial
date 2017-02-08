@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(publisher_subscriber_cpp)
+project(publisher_subscriber_py)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
+  rospy
   std_msgs
 )
 
@@ -100,8 +100,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES publish_cpp
-#  CATKIN_DEPENDS roscpp std_msgs
+#  LIBRARIES publisher_subscriber_py
+#  CATKIN_DEPENDS rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -112,29 +112,29 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
-#include_directories(
-#  ${catkin_INCLUDE_DIRS}
-#)
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
-# add_library(publish_cpp
-#   src/${PROJECT_NAME}/publish_cpp.cpp
+# add_library(publisher_subscriber_py
+#   src/${PROJECT_NAME}/publisher_subscriber_py.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(publish_cpp ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(publisher_subscriber_py ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(publish_cpp_node src/publish_cpp_node.cpp)
+# add_executable(publisher_subscriber_py_node src/publisher_subscriber_py_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(publish_cpp_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(publisher_subscriber_py_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(publish_cpp_node
+# target_link_libraries(publisher_subscriber_py_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -153,7 +153,7 @@ catkin_package(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS publish_cpp publish_cpp_node
+# install(TARGETS publisher_subscriber_py publisher_subscriber_py_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -178,17 +178,14 @@ catkin_package(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_publish_cpp.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_publisher_subscriber_py.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
 include_directories(include ${catkin_INCLUDE_DIRS})
-
-add_executable(publisher_cpp src/publisher_cpp.cpp)
-target_link_libraries(publisher_cpp ${catkin_LIBRARIES})
-
-add_executable(subscriber_cpp src/subscriber_cpp.cpp)
-target_link_libraries(subscriber_cpp ${catkin_LIBRARIES})
+add_executable(publisher_py src/publisher_py.py)
+target_link_libraries(publisher_py ${catkin_LIBRARIES})
