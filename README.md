@@ -24,7 +24,9 @@ Q: เปิด simulator ยังไง
 
 	A: roslaunch syrena_gazebo trandec.launch
 
-
+Q: ใช้ keyboard control หุ่นยังไง
+	
+	A: rosrun syrena_teleop keyboard.py 
 
 Q: เปิดดูกล้องยังไง
 
