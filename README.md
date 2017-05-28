@@ -22,7 +22,7 @@ Q: rosrun แล้วไม่เจอ file (rosrun pkg_name <ไม่เจ�
 
 Q: เปิด simulator ยังไง
 
-A: roslaunch syrena_gazebo trandec.launch
+	A: roslaunch syrena_gazebo trandec.launch
 
 
 
