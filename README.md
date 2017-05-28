@@ -8,15 +8,15 @@ Q&A
 
 Q:  rosrun แล้วไม่เจอ package (rosrun <ไม่เจอ pkg>
 
-A1: source devel/setup.bash in catkin_ws 
+	A1: source devel/setup.bash in catkin_ws 
 
-A2: rospack profile
+	A2: rospack profile
 
 
 
 Q: rosrun แล้วไม่เจอ file (rosrun pkg_name <ไม่เจอไฟล์>
 
-A: chmod 755 filename or chmod 755 -R directory
+	A: chmod 755 filename or chmod 755 -R directory
 
 
 
@@ -28,12 +28,12 @@ A: roslaunch syrena_gazebo trandec.launch
 
 Q: เปิดดูกล้องยังไง
 
-A: rqt -p ชื่อไรก็ได้ > menu bar > visualization > 
+	A: rqt -p ชื่อไรก็ได้ > menu bar > visualization > 
 
 
 
 Q: run control ยังไง
 
-A: rosrun zeabus_controller Controller > roslauch zeabus_controller control.launch
+	A: rosrun zeabus_controller Controller > roslauch zeabus_controller control.launch
 
 
