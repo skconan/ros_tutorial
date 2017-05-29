@@ -12,11 +12,9 @@ Q:  rosrun แล้วไม่เจอ package (rosrun <ไม่เจอ pk
 
 	A2: rospack profile
 
-
 Q: rosrun แล้วไม่เจอ file (rosrun pkg_name <ไม่เจอไฟล์>
 
 	A: chmod 755 filename or chmod 755 -R directory
-
 
 Q: เปิด simulator ยังไง
 
@@ -30,9 +28,10 @@ Q: เปิดดูกล้องยังไง
 
 	A: rqt -p ชื่อไรก็ได้ > menu bar > visualization > 
 
-
 Q: run control ยังไง
 
-	A: rosrun controller Controller > roslauch controller control.launch
+	A: roslaunch controller control.launch > rosrun controller Controller
+Q: Open joy zeabus
 
+	A: roslaunch zeabus_teleop joy_F710.launch > rosrun zeabus_teleop zeabus_joy
 
