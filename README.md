@@ -36,8 +36,16 @@ Q: Run joy zeabus
 	A: roslaunch zeabus_teleop joy_F710.launch > rosrun zeabus_teleop zeabus_joy
 Q: How to run completely
 	
-	A: 	1. roslaunch zeabus_bringup minimal.launch
-		2. roslainch zeabus_bringup zeabus_localize.launch
-		3. roslaunch controller control.launch
-		4. Run joy zeabus
+	A1: 	1. roscore
+		2. roslaunch zeabus_bringup minimal.launch
+		3. roslainch zeabus_bringup zeabus_localize.launch
+		4. roslaunch controller control.launch
+		5. Run joy zeabus
+		
+	A2:	1. roscore
+		2. minimal
+		3. localization
+		4. joy
+		5. joy_pub
+		6. open_camera
 		
