@@ -34,7 +34,7 @@ Q: Run control ยังไง
 Q: Run joy zeabus
 
 	A: roslaunch zeabus_teleop joy_F710.launch > rosrun zeabus_teleop zeabus_joy
-Q: How to run completely
+Q: How to run zeabus completely
 	
 	A1: 	1. roscore
 		2. roslaunch zeabus_bringup minimal.launch
