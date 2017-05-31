@@ -48,4 +48,12 @@ Q: How to run zeabus completely
 		4. joy
 		5. joy_pub
 		6. open_camera
-		
+Q: Error Could not find a package configuration file provided by "joy" with any ofthe following names:
+
+   joyConfig.cmake
+   joy-config.cmake
+    
+   (ตอนลง SIM เกิดจากไม่มี pkg)
+   	
+		A: pkg ที่ไม่เจอ คือ joy ลองหาประมาณว่า sudo apt-get install ros-kinetic-ชื่อpkg ลอง tab tab ดู
+		Example sudo apt-get install ros-kinetic-joy
