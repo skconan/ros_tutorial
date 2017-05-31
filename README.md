@@ -76,6 +76,10 @@ Q: Set network lan (ROS_MASTER_URI)
 			$ sudo nano /etc/hosts
 			เพิ่ม ip เครื่อง server 
 			Example 192.168.1.50	zeabus
+		2. ถ้าจะแก้ชื่อเครื่อง 
+			$ sudo nano /etc/hostname	//จำชื่อเดิมไว้ แล้วก็แก้ชื่อใหม่
+			// หา 127.0.1.1	แล้วแก้ชื่อ 
+			$ sudo nano /etc/hosts		//หาชื่อเดิมเมื่อกี้ แล้วแก้เป็นชื่อใหม่ให้เหมือนกับใน hostname
 			
 	A3: Setting CONNECTIONS FOR SERVER and CLIENT:
 		1. Go to 'Edit Connections..'
