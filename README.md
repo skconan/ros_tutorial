@@ -48,17 +48,17 @@ Q: How to run zeabus completely
 		4. joy
 		5. joy_pub
 		6. open_camera
+		
 Q: Error Could not find a package configuration file provided by "joy" with any ofthe following names:
-
    joyConfig.cmake
    joy-config.cmake
-    
-   (ตอนลง SIM เกิดจากไม่มี pkg)
-   	
-		A: pkg ที่ไม่เจอ คือ joy ลองหาประมาณว่า sudo apt-get install ros-kinetic-ชื่อpkg ลอง tab tab ดู
-		Example sudo apt-get install ros-kinetic-joy
-Q: Set network lan (ROS_MASTER_URI)
+(ตอนลง SIM เกิดจากไม่มี pkg)
 	
+	A: pkg ที่ไม่เจอ คือ joy ลองหาประมาณว่า sudo apt-get install ros-kinetic-ชื่อpkg ลอง tab tab ดู
+		Example sudo apt-get install ros-kinetic-joy   	
+		
+Q: Set network for multiple machines
+
 	A1: For SERVER:
 		1. เข้าไปดูชื่อ เครื่องที่ hostname 
 			$ cat /etc/hostname
@@ -68,19 +68,19 @@ Q: Set network lan (ROS_MASTER_URI)
 			$ sudo nano /etc/hostname	//หาชื่อเดิมเมื่อกี้ แล้วแก้เป็นชื่อใหม่ให้เหมือนกับใน hosts
 		3. เพิ่มเครื่อง CLIENT ให้ครบทุกเครื่อง
 			$ sudo nano /etc/hosts
-			เพิ่ม ip เครื่อง client สมมติไรไปก่อน เช่น 192.168.1.xx (xx = ไรก้ได้) ตามด้วย ชื่อที่แทนเครื่องสมมติขึ้น
+			เพิ่ม ip กับ hostname เครื่อง
+			สมมติไรไปก่อน เช่น 192.168.1.xx (xx = ไรก้ได้) ตามด้วย hostname 
 			Example 192.168.1.100	skconan
 	
 	A2: For CLIENT:
-		1. เพิ่มเครื่อง CLIENT ให้ครบทุกเครื่อง
-			$ sudo nano /etc/hosts
-			เพิ่ม ip เครื่อง server 
-			Example 192.168.1.50	zeabus
-		2. ถ้าจะแก้ชื่อเครื่อง 
+		1. ถ้าจะแก้ชื่อเครื่อง 
 			// หา 127.0.1.1	แล้วแก้ชื่อ 
 			$ sudo nano /etc/hosts		//จำชื่อเดิมไว้ แล้วก็แก้ชื่อใหม่ 
 			$ sudo nano /etc/hostname	//หาชื่อเดิมเมื่อกี้ แล้วแก้เป็นชื่อใหม่ให้เหมือนกับใน hosts
-			
+		2. เพิ่มเครื่อง SERVER
+			$ sudo nano /etc/hosts
+			เพิ่ม ip กับ hostname เครื่อง server 
+			Example 192.168.1.50	zeabus
 			
 	A3: Setting CONNECTIONS FOR SERVER and CLIENT:
 		1. Go to 'Edit Connections..'
@@ -90,12 +90,18 @@ Q: Set network lan (ROS_MASTER_URI)
 			3.2 Address : ip ที่สมมติไว้ ตรง A1, A2
 			3.3 Netmask : 255.255.255.0
 			3.4 Gateway : 192.168.1.1
+			
 	A4: เวลา run 'roscore' ก็ run ที่เครื่อง server ที่เดียว
+
+Q: Set ROS_MASTER_URI for multiple machines
+	
+	A: export ROS_IP=`hostname -I`
+	   export ROS_MASTER_URI=http://192.168.1.50:11311
 
 Q: Create RSA key (Client=Your notebook)
 	
-	A:	1. Open Terminal (ctrl + alt + t).
-		2. Create a new RSA keys. Run command :
-		    ssh-keygen
-		3. Tranfer RSA keys to host. Run command :
-		    ssh-copy-id username@hostname
+	A: 1. Open Terminal (ctrl + alt + t).
+	   2. Create a new RSA keys. Run command :
+		ssh-keygen
+	   3. Tranfer RSA keys to host. Run command :
+	   	ssh-copy-id username@hostname
