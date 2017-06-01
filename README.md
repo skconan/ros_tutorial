@@ -90,3 +90,11 @@ Q: Set network lan (ROS_MASTER_URI)
 			3.3 Netmask : 255.255.255.0
 			3.4 Gateway : 192.168.1.1
 	A4: เวลา run 'roscore' ก็ run ที่เครื่อง server ที่เดียว
+
+Q: Create RSA key (Client=Your notebook)
+	
+	A:	1. Open Terminal (ctrl + alt + t).
+		2. Create a new RSA keys. Run command :
+		    ssh-keygen
+		3. Tranfer RSA keys to host. Run command :
+		    ssh-copy-id username@hostname
