@@ -105,3 +105,12 @@ Q: Create RSA key (Client=Your notebook)
 		ssh-keygen
 	   3. Tranfer RSA keys to host. Run command :
 	   	ssh-copy-id username@hostname
+Q: In file /etc/hosts
+
+	192.168.1.100   zeabus01
+	192.168.1.50    zeabus00
+	192.168.1.69    skconan
+	192.168.1.27    dantai 
+	192.168.1.38    redsanji
+	192.168.1.10    Ekarat 
+	192.168.1.84    eveem
