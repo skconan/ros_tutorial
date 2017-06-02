@@ -1,6 +1,5 @@
 source /opt/ros/kinetic/setup.bash
 source ~/catkin_ws/devel/setup.bash
-export ROS_MASTER_URI=http://localhost:11311/
 
 alias edit_alias='nano ~/.bash_aliases; source ~/.bash_aliases;'
 alias edit_bashrc='nano ~/.bashrc; source ~/.bashrc;'
@@ -15,3 +14,5 @@ alias localization='roslaunch zeabus_bringup zeabus_localization_ukf.launch'
 alias joy='roslaunch zeabus_teleop joy_F710.launch'
 alias joy_pub='rosrun zeabus_teleop zeabus_joy'
 
+alias rosme='export ROS_MASTER_URI=http://localhost:11311/'
+alias roszeabus='export ROS_IP=`hostname -I`;export ROS_MASTER_URI=http://192.168.1.100:11311;'
