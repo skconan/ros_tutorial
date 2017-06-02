@@ -114,3 +114,4 @@ Q: In file /etc/hosts
 	192.168.1.38    redsanji
 	192.168.1.10    Ekarat 
 	192.168.1.84    eveem
+	192.168.1.99    jay
