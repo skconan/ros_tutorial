@@ -115,3 +115,6 @@ Q: In file /etc/hosts
 	192.168.1.10    Ekarat 
 	192.168.1.84    eveem
 	192.168.1.99    jay
+Q: Service error: md5 is different
+	
+	A: Check file service (.srv) is same
