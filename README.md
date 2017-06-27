@@ -118,9 +118,11 @@ Q: In file /etc/hosts
 Q: Service error: md5 is different
 	
 	A: Check file service (.srv) is same
-Q: How to solve this error (QObject::~QObject: Timers cannot be stopped from another thread)
+Q: [solved] this error (QObject::~QObject: Timers cannot be stopped from another thread)
 	
-	A1: Unistall PyQt5 follow : https://www.howtoinstall.co/en/ubuntu/trusty/pyqt5-dev?action=remove
-	A2: Some function in ros is removed such as rosrun you can use command below to install
+	A: Unistall PyQt5 (Purge all) or Change default PyQt Version 5 to 4 but in this solution I don't know how to change version. If you know please pull request answer or send answer to my email (supakit.kr@gmail.com) 
+	How to unistall PyQt5 : https://www.howtoinstall.co/en/ubuntu/trusty/pyqt5-dev?action=remove
+	
+	Warning : Some function in ros is removed such as rosrun you can use command below to install
 		$ sudo apt-get install ros-kinetic-rosbash
 	ref of rosrun : http://wiki.ros.org/rosrun
