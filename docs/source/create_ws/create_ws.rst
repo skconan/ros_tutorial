@@ -5,7 +5,7 @@ Create Workspace
         :alt: tree
         :align: center  
 
-**1. สร้าง workspace ชื่อ catkin_ws ที่ directory home และสร้าง directory src ใน catkin_ws **::
+**1. สร้าง workspace ชื่อ catkin_ws ที่ directory home และสร้าง directory src ใน catkin_ws ** ::
 
     $ cd ~/ 
     $ mkdir catkin_ws  
