@@ -12,8 +12,8 @@ Contents:
    :maxdepth: 2
    
    installation/installation
-   setupenv/setupenv 
-
+   setup_env/setup_env 
+   create_ws/create_ws 
 
 Indices and tables
 ==================
