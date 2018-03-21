@@ -27,3 +27,12 @@ Install ROS in Ubuntu
     $ sudo apt-get install ros-kinetic-desktop-full 
 
     Reference: http://wiki.ros.org/kinetic/Installation/Ubuntu 
+
+
+2. ตั้งค่า rosdep 
+---------------
+
+    rosdep จะช่วยให้เราสามารถติดตั้ง dependencies ได้ง่ายขึ้น ::
+
+    $ sudo rosdep init 
+    $ rosdep update 
