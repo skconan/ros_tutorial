@@ -8,7 +8,7 @@ Create Workspace
 1. สร้าง directory สำหรับ workspace 
 ---------------------------------
 
-    สร้าง directory ชื่อ catkin_ws ที่ directory "home" และสร้าง directory "src" ใน "catkin_ws" ** ::
+    สร้าง directory ชื่อ catkin_ws ที่ directory **home** และสร้าง directory **src** ใน **catkin_ws** ::
 
     $ cd ~/ 
     $ mkdir catkin_ws  
@@ -16,10 +16,12 @@ Create Workspace
     $ mkdir src 
     
     
-2. สั่ง catkin_init_workspace  ที่ directory catkin_ws/src  
+2. สั่ง catkin_init_workspace    
 ------------------------------------------------------
 
-    catkin_init_workspace :: จะเป็นตัวกำหนด workspace โดยจะมีการสร้างไฟล์ CMakeList.txt ขึ้นมา ::
+    สั่ง catkin_init_workspace ที่ directory **catkin_ws/src** :: 
+    
+    จะเป็นตัวกำหนด workspace โดยจะมีการสร้างไฟล์ CMakeList.txt ขึ้นมา ::
     
     $ cd ~/catkin_ws/src 
     $ catkin_init_workspace 
