@@ -17,7 +17,7 @@ Create Workspace
     
     
 2. สั่ง catkin_init_workspace    
-------------------------------------------------------
+----------------------------
 
     สั่ง catkin_init_workspace ที่ directory **catkin_ws/src** :: 
     
@@ -25,3 +25,19 @@ Create Workspace
     
     $ cd ~/catkin_ws/src 
     $ catkin_init_workspace 
+
+3. สั่ง catkin_make 
+    
+    ที่ catkain_ws โดยคำสั่ง catkin_make จะเหมือนการ run คำสั่งข้างล่างนี้ ::
+    
+    $ cd src 
+    $ catkin_init_workspace 
+    $ cd .. 
+    $ mkdir build 
+    $ cd build 
+    $ cmake ../src -DCMAKE_INSTALL_PREFIX=../install -DCATKIN_DEVEL_PREFIX=../devel 
+    $ make 
+    
+**reference:** http://wiki.ros.org/catkin/commands/catkin_make  
+    
+    
