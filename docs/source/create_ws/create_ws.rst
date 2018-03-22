@@ -27,6 +27,7 @@ Create Workspace
     $ catkin_init_workspace 
 
 3. สั่ง catkin_make 
+-----------------
     
     ที่ catkain_ws โดยคำสั่ง catkin_make จะเหมือนการ run คำสั่งข้างล่างนี้ ::
     
