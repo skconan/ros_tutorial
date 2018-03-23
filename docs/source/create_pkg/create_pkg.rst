@@ -27,7 +27,7 @@ Package name ขึ้นต้นด้วย a-z ตัวเล็ก แล�
     $ catkin_make 
     $ source devel/setup.bash 
 
-   **reference:** http://wiki.ros.org/action/fullsearch/ROS/Tutorials/CreatingPackage    
+**reference:** http://wiki.ros.org/action/fullsearch/ROS/Tutorials/CreatingPackage    
     
     
 2. การเพิ่ม Dependencies ในตอนหลัง     
@@ -44,6 +44,7 @@ Package name ขึ้นต้นด้วย a-z ตัวเล็ก แล�
         :alt: rosrun_pkg
         :align: center
 
+
     3.1. เราจะสร้าง Package ไว้ใน ~/catkin_ws/src 
 
     3.2. สร้าง package ชื่อว่า hello_pkg ซึ่ง จะเขียนโปรแกรมด้วย Python แสดงว่าต้องมีการอ้างอิง (dependency) rospy สั่ง catkin_create_pkg hello_pkg rospy ::
@@ -57,35 +58,28 @@ Package name ขึ้นต้นด้วย a-z ตัวเล็ก แล�
         :alt: catkin_create_pkg
         :align: center  
         
+
     3.3. สั่ง catkin_make ที่ ~/catkin_ws หากไม่มี Error จะได้ผลลัพธ์ใกล้เคียงกับรูปด้านล่าง 
 
     .. image:: images/catkin_make.jpg
         :alt: catkin_make
         :align: center
 
+
     3.4. เข้าไปที่ directory hello_pkg/src 
 
     3.5. สร้างไฟล์ main.py เพื่อเขียนโปรแกรมรับชื่อ และแสดงผล ดังนี้ ::
 
-    # execute with python2 
-
-    #!/usr/bin/python2 
-
-    import rospy 
-
-    # check module name is main 
-
-    if __name__=='__main__': 
-
-    # ประกาศชื่อ node 
-
-            rospy.init_node('hello_program') 
-
-            print "Name: " 
-
-            name = raw_input() 
-
-            print("Hello, "+name)   
+        # execute with python2 
+        #!/usr/bin/python2 
+        import rospy 
+        # check module name is main 
+        if __name__=='__main__': 
+        # ประกาศชื่อ node 
+                rospy.init_node('hello_program') 
+                print "Name: " 
+                name = raw_input() 
+                print("Hello, "+name)   
 
     3.6. สั่ง catkin_make ที่ ~/catkin_ws 
 
@@ -95,13 +89,13 @@ Package name ขึ้นต้นด้วย a-z ตัวเล็ก แล�
         :alt: roscore
         :align: center  
 
+
     3.8. รันโปรแกรม โดยใช้คำสั่ง rosrun ::
 
-    **rosrun <ชื่อ package> <ชื่อไฟล์ python หรือชื่อ node>** 
-
-    ถ้าเป็น Python: rosrun package_name file_name.py 
-    ถ้าเป็น Cpp:rosrun packace_name node_name 
-    Node_name ตั้งค่าใน CMakeList.txt 
+        **rosrun <ชื่อ package> <ชื่อไฟล์ python หรือชื่อ node>** 
+        ถ้าเป็น Python: rosrun package_name file_name.py 
+        ถ้าเป็น Cpp:rosrun packace_name node_name 
+        Node_name ตั้งค่าใน CMakeList.txt 
 
     3.9. ในกรณีที่ rosrun <tab>ๆๆ (ปุ่ม Tab) แล้วชื่อ package ไม่ขึ้น ให้ทำตามนี้
         3.9.1. สั่ง source devel/setup.bash 
@@ -138,6 +132,7 @@ Package name ขึ้นต้นด้วย a-z ตัวเล็ก แล�
     .. image:: images/running_pkg.jpg
         :alt: running_pkg
         :align: center
+
 
     4.2. รันคำสั่ง rosnode list ในอีก Terminal โดย rosnode list เป็นคำสั่งที่แสดง node กำลังทำงานอยู่ (/rosout เป็น node ที่ roscore สร้างขึ้นมา) ในบทความต่อไปเราจะมารู้จักกับ node กันให้มากขึ้น ::
 
