@@ -14,6 +14,7 @@ Contents:
    installation/installation
    setup_env/setup_env 
    create_ws/create_ws 
+   create_pkg/create_pkg 
 
 Indices and tables
 ==================
