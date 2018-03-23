@@ -149,30 +149,3 @@ Package name ขึ้นต้นด้วย a-z ตัวเล็ก แล�
 
     
 **reference:** http://wiki.ros.org/ROS/Tutorials/CreatingPackage  
-
-4. NOTE
-------- 
-
-    .. image:: images/python_err.jpg
-        :alt: python_err
-        :align: center  
-
-    หากมี error เกี่ยวกับ version ของ Python เนื่องจากมีการตั้ง default ของ python เป็น version อื่นที่ไม่ใข่ Python2 ตัวอย่างในรูปเป็น anaconda3 
-    
-    **วิธีแก้**
-    
-    ให้ไปแก้ที่ catkin_ws/build/CMakeCache.txt โดยให้ไปแก้ path เป็น python2 ดังนี้ ::
-
-        … 
-        //Path to a program. 
-        NOSETESTS:FILEPATH=/usr/bin/python2/nosetests 
-        … 
-        //Path to a program. 
-        PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2 
-        … 
-
-    .. image:: images/cmakecache.jpg
-        :alt: cmakecache
-        :align: center  
-
-    
