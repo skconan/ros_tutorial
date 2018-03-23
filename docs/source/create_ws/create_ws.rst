@@ -1,7 +1,7 @@
 Create Workspace
 ========================================
 
-    .. image:: images/tree.png
+    .. image:: images/tree.jpg
         :alt: tree
         :align: center  
 
@@ -39,11 +39,21 @@ Create Workspace
     $ cmake ../src -DCMAKE_INSTALL_PREFIX=../install -DCATKIN_DEVEL_PREFIX=../devel 
     $ make 
     
+    จะได้ผลลัพธ์คล้ายๆกับในภาพ
+
+    .. image:: images/after_catkin_make.jpg
+        :alt: after_catkin_make
+        :align: center  
+
 **reference:** http://wiki.ros.org/catkin/commands/catkin_make  
 
 4. NOTE
 ------- 
- 
+
+    .. image:: images/python_err.jpg
+        :alt: python_err
+        :align: center  
+
     หากมี error เกี่ยวกับ version ของ Python เนื่องจากมีการตั้ง default ของ python เป็น version อื่นที่ไม่ใข่ Python2 ตัวอย่างในรูปเป็น anaconda3 
     
     **วิธีแก้**
@@ -58,5 +68,8 @@ Create Workspace
         PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2 
         … 
 
-    
+    .. image:: images/cmakecache.jpg
+        :alt: cmakecache
+        :align: center  
+
     
